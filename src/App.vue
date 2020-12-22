@@ -1,31 +1,45 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app id="tce-app">
+    <v-container pa-0 fluid class="tce-bg">
+      <router-view/>
+    </v-container>
+  </v-app>
 </template>
 
+<script>
+
+export default {
+  name: 'App',
+  components: {
+  },
+  data () {
+    return {
+      //
+    }
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.tce-bg{
+  background-color: #E5E5E5 !important
 }
-#nav {
-  padding: 30px;
+.size18{
+  font-size: 18px !important
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.text-green{
+  color: #365337 !important
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.bg-green{
+  background-color: #365337 !important
+}
+.text-default{
+  color: #777777 !important
+}
+.border {
+  border-radius: 10px;
+}.border-btn {
+  border-radius: 6px;
 }
 </style>
+
